@@ -10,6 +10,10 @@ This change log follows the format documented in [Keep a CHANGELOG].
 
 ## Unreleased
 
+### Fixed
+
+- Fixed a bug in setDay when using weekStartsOn that is not 0
+
 ### Added
 
 - [Added `weeks` to `Duration`](https://github.com/date-fns/date-fns/pull/1592).
