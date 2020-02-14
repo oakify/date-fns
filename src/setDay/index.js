@@ -25,14 +25,14 @@ import requiredArgs from '../_lib/requiredArgs/index.js'
  * @throws {RangeError} `options.weekStartsOn` must be between 0 and 6
  *
  * @example
- * // Set Sunday to 1 September 2014:
- * var result = setDay(new Date(2014, 8, 1), 0)
+ * // Set week day to the 0th day, with the default weekStartsOn of Sunday:
+ * var result = setDay(new Date('2014-09-01') /* a Monday */, 0)
  * //=> Sun Aug 31 2014 00:00:00
  *
  * @example
- * // If week starts with Monday, set Sunday to 1 September 2014:
- * var result = setDay(new Date(2014, 8, 1), 0, { weekStartsOn: 1 })
- * //=> Sun Sep 07 2014 00:00:00
+ * // Set week day to the 0th day, with a weekStartsOn of Monday:
+ * var result = setDay(new Date('2014-09-01'), 0, { weekStartsOn: 1 })
+ * //=> Monday Sep 01 2014 00:00:00
  */
 export default function setDay(dirtyDate, dirtyDay, dirtyOptions) {
   requiredArgs(2, arguments)
